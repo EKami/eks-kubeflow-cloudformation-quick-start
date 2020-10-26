@@ -19,7 +19,7 @@ eksctl scale nodegroup --cluster ${AWS_CLUSTER_NAME} --name $NODEGROUP_NAME --no
 
 curl --silent --location "https://kubeflow-aws.s3-us-west-2.amazonaws.com/kfctl/linux/kfctl_v1.0.2-1-g93e95e1_linux.tar.gz" | tar xz -C /tmp
 
-sudo cp -v /tmp/kfctl /usr/local/bin
+sudo cp -v /tmp/kfctl /bin
 
 cat << EoF > kf-install.sh
 export AWS_CLUSTER_NAME=\${AWS_CLUSTER_NAME}
